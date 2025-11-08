@@ -1,0 +1,182 @@
+/* === Основні кольори та шрифти === */
+:root {
+  --main-green: #00a046;
+  --dark-green: #008638;
+  --light-gray: #f8f8f8;
+  --border-gray: #ddd;
+  --text-dark: #222;
+  --text-light: #555;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+/* === Контейнер === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Хедер === */
+.header {
+  background: var(--main-green);
+  color: #fff;
+  padding: 18px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+
+/* === Основна частина === */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+/* === Розділ замовлення === */
+.order-summary {
+  background: var(--light-gray);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-gray);
+}
+
+.order-summary h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+#orderTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+#orderTable th, #orderTable td {
+  border: 1px solid var(--border-gray);
+  padding: 10px;
+  text-align: center;
+}
+
+#orderTable th {
+  background-color: #e9f7ee;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+#orderTable td {
+  background-color: #fff;
+}
+
+#totalPrice {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main-green);
+  margin-top: 10px;
+}
+
+/* === Розділ доставки === */
+.delivery-info {
+  background: var(--light-gray);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-gray);
+}
+
+.delivery-info h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: var(--main-green);
+}
+
+#cardDetails {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* === Кнопка оформлення === */
+.submit-btn {
+  background: var(--main-green);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 220px;
+  align-self: flex-end;
+}
+
+.submit-btn:hover {
+  background: var(--dark-green);
+}
+
+/* === Підвал === */
+.footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+/* === Адаптивність === */
+@media (max-width: 768px) {
+  main {
+    gap: 20px;
+  }
+
+  #orderTable th, #orderTable td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    align-self: center;
+  }
+}
